@@ -1,21 +1,45 @@
-# TDD-java-relogio
-Desenvolvimento de um relógio simples utilizando Test Drive Development
+# TDD-java-calculadora
+Desenvolva uma calculadora usando a metodologia TDD
 
-Um relógio digital apresenta as características:
+## Instruções
+1. Para começar, você precisará de uma IDE que suporte Java,
+   como o IntelliJ IDEA, VSCODE ou o Eclipse, e a biblioteca de
+   testes JUnit.
+2. Crie um novo projeto Java.
+3. Adicione a biblioteca JUnit ao projeto.
+4. Crie uma classe de teste chamada CalculadoraTest.
+5. Antes de criar a classe Calculadora, escreva um teste para o
+   método soma que ainda não existe:
 
-- Pode ser programado com horas, minutos e segundos.
-- Pode ser reiniciado para meia noite a pedido do usuário
-- Pode marcar um intervalo de tempo. O usuário informa quando se inicia e quando
-termina a marcação (função cronômetro) e o relógio responde o tempo decorrido.
-- Pode imprimir a hora no formato 24h ou AM/PM
-- Não passa o tempo sozinho, mas atualiza corretamente o horário quando recebe
-indicação de passagem do tempo do Sistema Operacional.
+```
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+public class CalculadoraTest {
+    @Test
+    public void testSoma() {
+        Calculadora calc = new Calculadora();
+        assertEquals(5, calc.soma(2, 3));
+    }
+}
+```
 
-## Entregas
+6. Observe que a classe Calculadora e o método soma ainda
+   não existem. Isso é normal em TDD: você começa com os
+   testes.
+7. Execute o teste. Ele deve falhar porque a classe e o método
+   ainda não existem.
+8. Agora, crie a classe Calculadora com o método soma para
+   fazer o teste passar:
 
-- Classe RelogioTest, contendo a sequência dos testes segundo a metodologia TDD para
-criação da classe Relogio
-- Classe Relogio, contendo a versão final após os testes.
-- Procure manter tanto os testes como atributos e métodos na ordem em que foram
-criados no processo para avaliação correta.
-- Lembre-se que, no TDD, cada teste é escrito antes do código ao qual ele corresponde.
+```
+public class Calculadora {
+    public int soma(int a, int b) {
+        return a + b;
+    }
+}
+```
+9. Execute o teste novamente. Desta vez, ele deve passar.
+10. Continue este processo para outros métodos como
+    subtracao, multiplicacao, divisao. Primeiro, escreva o teste,
+    veja-o falhar, depois implemente o código e veja o teste
+    passar
