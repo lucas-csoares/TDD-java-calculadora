@@ -10,4 +10,12 @@ public class CalculatorTest {
         int result = calculator.sum(2, 3);
         assertEquals(5, result);
     }
+
+    @Test
+    @Displayname("Division test")
+    public void testDivision() {
+        Calculator calculator = new Calculator();
+        asserEquals(2, calculator.division(10,5));
+    }
+
 }
