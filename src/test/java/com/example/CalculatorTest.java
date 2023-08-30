@@ -12,10 +12,9 @@ public class CalculatorTest {
     }
 
     @Test
-    @Displayname("Division test")
     public void testDivision() {
         Calculator calculator = new Calculator();
-        asserEquals(2, calculator.division(10,5));
+        assertEquals(2, calculator.division(10,5));
     }
 
 }
