@@ -17,4 +17,10 @@ public class CalculatorTest {
         assertEquals(3, calculator.division(15,5));
     }
 
+    @Test
+    public void testMultiplication() {
+        Calculator calculator = new Calculator();
+        assertEquals(15, calculator.multiplication(5,3));
+    }
+
 }
