@@ -20,7 +20,7 @@ public class CalculatorTest {
     @Test
     public void testMultiplication() {
         Calculator calculator = new Calculator();
-        assertEquals(15, calculator.multiplication(5,3));
+        assertEquals(10.8, calculator.multiplication(4.5,2.4).doubleValue(),0.0001);
     }
 
 }

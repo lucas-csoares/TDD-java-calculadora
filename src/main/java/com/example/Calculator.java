@@ -11,8 +11,14 @@ public class Calculator {
     }
 
 
-    public int multiplication(int num1, int num2) {
-        return num1 * num2;
+    public Number multiplication(double num1, double num2) {
+        double resultado = num1 * num2;
+        if(resultado == (int) resultado)
+            return (int) resultado;
+        else
+            return resultado;
     }
+
+
 
 }
